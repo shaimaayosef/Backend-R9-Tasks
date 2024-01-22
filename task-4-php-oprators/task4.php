@@ -3,7 +3,7 @@
 // task 1
 $day = date('D');
 echo "Welcome! Have a wonderful " .$day ."<br>";
-
+echo "<br>"."**************"."<br>" ;
 
 // task 2
 $x = 5;
@@ -16,7 +16,7 @@ echo "<br>";
 echo $x---$x--; // this line means that the latest valu of x added to the same valu after decrement by 1 (7-6) so output will be (1) then the new valu of x that is 6 will decrement again by another 1 #
 echo "<br>"; 
 echo $x; // 5 (6-1) the latest value of x #
-
+echo "<br>"."**************"."<br>" ;
 
 // task 3
 $a = '1';
@@ -28,7 +28,7 @@ echo $b ."<br>";
 $b = "2$b";
 echo $a ."<br>";
 echo $b ."<br>";
-
+echo "<br>"."**************"."<br>" ;
 
 // task 4
 $number = 5;
