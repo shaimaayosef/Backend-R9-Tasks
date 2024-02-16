@@ -6,27 +6,12 @@ if (isset($_POST['update'])){
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     $contact = $_POST['contact'];
-    $updateFields = array();
-    if (!empty($name)) {
-        $updateFields[] = "name='$name'";
-    }
-    if (!empty($email)) {
-        $updateFields[] = "email='$email'";
-    }
-    if (!empty($pass)) {
-        $updateFields[] = "pass='$pass'";
-    }
-    if (!empty($contact)) {
-        $updateFields[] = "contactInfo='$contact'";
-    }
-
-    if (!empty($updateFields)) {
-        $updateQuery = "UPDATE student SET " . implode(", ", $updateFields) . " WHERE id=$id";
-        $conn->exec($updateQuery);
-        echo "<script>alert('updated successfully!')</script>";
-    } else {
-        echo "<script>alert('nothing to update!')</script>";
-    }
+    $updateQuery = "UPDATE student
+    SET name = '$name', contactInfo = '$contact', email = '$email', pass = '$pass'
+    WHERE id = $id";
+    $conn->exec($updateQuery);
+    echo "<script>alert('updated successfully!')</script>";
+    // echo $stmt->rowCount() . " records UPDATED successfully";
 }
 ?>
 <!DOCTYPE html>
